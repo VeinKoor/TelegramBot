@@ -1,13 +1,12 @@
 import asyncio
-from aiogram import Bot, Dispatcher, F
-from aiogram.types import Message
-from aiogram.filters import Command
+from aiogram import Bot, Dispatcher
 
 from app.handlers import router
 from config import TOKEN
-
+from app.database.models import async_main
 
 async def main():
+    await async_main()
     bot = Bot(token=TOKEN)
     dp = Dispatcher()
 
