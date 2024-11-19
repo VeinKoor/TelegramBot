@@ -5,6 +5,7 @@ from app.handlers import router
 from config import TOKEN
 from app.database.models import async_main
 
+
 async def main():
     await async_main()
     bot = Bot(token=TOKEN)
